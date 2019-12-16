@@ -7,7 +7,8 @@
     "type": "git"
   },
   "scripts": {
-    "build": "ts-node ./scripts/build",
+    "dev": "nodemon",
+    "build": "ts-node --transpile-only ./scripts/build",
     "fmt": "prettier --write --single-quote './src/**/*.{ts,tsx}'",
     "lint:css": "stylelint --custom-syntax postcss-jsx './src/**/styles.ts'",
     "lint:js": "eslint '**/*.{ts,tsx}'",
@@ -46,6 +47,7 @@
     "react": "^16.12.0",
     "react-dom": "^16.12.0",
     "react-markdown": "^4.2.2",
+    "serve": "^11.2.0",
     "styled-components": "^4.4.1",
     "styled-reset": "^4.0.8",
     "stylelint": "^12.0.0",
