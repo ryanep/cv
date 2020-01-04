@@ -1,10 +1,10 @@
 variable "name" {}
 variable "aws_region" {}
-variable "bucket_name" {}
+variable "aws_bucket_name" {}
+variable "aws_certificate_arn" {}
 variable "subdomain" {}
 variable "domain" {}
 variable "digital_ocean_token" {}
-variable "certificate_arn" {}
 
 locals {
   s3_origin_id = "S3-${var.subdomain}.${var.domain}"
@@ -24,7 +24,7 @@ provider "aws" {
 }
 
 resource "aws_s3_bucket" "cdn" {
-  bucket = "${var.bucket_name}"
+  bucket = "${var.aws_bucket_name}"
   acl    = "public-read"
 
   website {
@@ -39,7 +39,6 @@ resource "aws_cloudfront_origin_access_identity" "origin_access_identity" {
 
 resource "aws_cloudfront_distribution" "cdn_s3_distribution" {
   origin {
-    # domain_name = "${var.bucket_name}.s3-website.${var.aws_region}.amazonaws.com"
     domain_name = "${aws_s3_bucket.cdn.website_endpoint}"
     origin_id   = "${local.s3_origin_id}"
 
@@ -98,7 +97,7 @@ resource "aws_cloudfront_distribution" "cdn_s3_distribution" {
   }
 
   viewer_certificate {
-    acm_certificate_arn = "${var.certificate_arn}"
+    acm_certificate_arn = "${var.aws_certificate_arn}"
     ssl_support_method  = "sni-only"
   }
 

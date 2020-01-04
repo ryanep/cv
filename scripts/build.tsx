@@ -54,6 +54,9 @@ const init = async () => {
 </body>
 </html>`;
 
+  await fs.promises.mkdir(path.join(process.cwd(), './dist'), {
+    recursive: true,
+  });
   await fs.promises.writeFile(
     path.join(process.cwd(), './dist/index.html'),
     output,
