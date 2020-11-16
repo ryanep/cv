@@ -7,7 +7,7 @@
     "type": "git"
   },
   "scripts": {
-    "dev": "nodemon",
+    "dev": "cross-env NODE_ENV=development nodemon",
     "build": "ts-node --transpile-only ./scripts/build",
     "fmt": "prettier --write --single-quote './src/**/*.{ts,tsx}'",
     "lint:css": "stylelint --custom-syntax postcss-jsx './src/**/styles.ts'",
@@ -27,6 +27,8 @@
     "@types/testing-library__react": "^9.1.2",
     "@typescript-eslint/eslint-plugin": "^2.11.0",
     "@typescript-eslint/parser": "^2.11.0",
+    "cross-env": "^7.0.2",
+    "dotenv-safe": "^8.2.0",
     "eslint": "^6.7.2",
     "eslint-config-airbnb-typescript": "^6.3.1",
     "eslint-config-prettier": "^6.7.0",

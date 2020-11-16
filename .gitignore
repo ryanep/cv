@@ -4,3 +4,4 @@ data/
 .terraform/
 *.tar.gz
 *.log
+.env

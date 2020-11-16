@@ -1,11 +1,14 @@
 import fs from 'fs';
 import path from 'path';
+import { config } from 'dotenv-safe';
 import React, { createElement } from 'react';
 import { renderToString } from 'react-dom/server';
 import { ServerStyleSheet, StyleSheetManager } from 'styled-components';
 import fetch from 'node-fetch';
 import { Data } from '../src/types/data';
 import Home from '../src/pages/home';
+
+config();
 
 interface AppProps {
   data: Data;
@@ -21,6 +24,15 @@ const App: React.FC<AppProps> = ({ data, sheet }) => {
 };
 
 const fetchData = async (url: string): Promise<Data> => {
+  if (process.env.NODE_ENV === 'development') {
+    const data = await fs.promises.readFile(
+      path.join(process.cwd(), './data/cv.json'),
+      'utf8',
+    );
+    const cvData = JSON.parse(data) as Data;
+    return cvData;
+  }
+
   const response = await fetch(url);
   if (response.ok) {
     const data: Data = await response.json();
