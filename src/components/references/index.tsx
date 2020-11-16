@@ -1,12 +1,9 @@
 import React from 'react';
-import Wrap from '../wrap';
-import { ReferencesProps } from './types';
+import { Wrap } from '#/components/wrap';
 import * as styled from './styles';
+import { ReferencesProps } from './types';
 
-export const References: React.FC<ReferencesProps> = ({
-  title,
-  description,
-}) => {
+export const References = ({ title, description }: ReferencesProps) => {
   return (
     <styled.References>
       <Wrap>
@@ -18,5 +15,3 @@ export const References: React.FC<ReferencesProps> = ({
     </styled.References>
   );
 };
-
-export default References;

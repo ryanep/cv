@@ -1,10 +1,10 @@
 import React from 'react';
-import Wrap from '../wrap';
-import Bubbles from '../bubbles';
-import { HeaderProps } from './types';
+import { Bubbles } from '#/components/bubbles';
+import { Wrap } from '#/components/wrap';
 import * as styled from './styles';
+import { HeaderProps } from './types';
 
-export const Header: React.FC<HeaderProps> = ({ title, links }) => {
+export const Header = ({ title, links }: HeaderProps) => {
   return (
     <styled.Header data-testid="header">
       <Bubbles />
@@ -15,7 +15,7 @@ export const Header: React.FC<HeaderProps> = ({ title, links }) => {
             <styled.Title>{title.role}</styled.Title>
           </styled.Heading>
           <div>
-            {links.map(link => (
+            {links.map((link) => (
               <styled.Link
                 key={link.id}
                 href={link.url}
@@ -31,5 +31,3 @@ export const Header: React.FC<HeaderProps> = ({ title, links }) => {
     </styled.Header>
   );
 };
-
-export default Header;

@@ -1,8 +1,8 @@
 import React from 'react';
-import { SkillTopicProps } from './types';
 import * as styled from './styles';
+import { SkillTopicProps } from './types';
 
-export const SkillTopic: React.FC<SkillTopicProps> = ({ title, skills }) => {
+export const SkillTopic = ({ title, skills }: SkillTopicProps) => {
   return (
     <styled.Topic>
       <styled.Title>{title}</styled.Title>
@@ -17,5 +17,3 @@ export const SkillTopic: React.FC<SkillTopicProps> = ({ title, skills }) => {
     </styled.Topic>
   );
 };
-
-export default SkillTopic;

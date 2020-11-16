@@ -1,14 +1,14 @@
 import React from 'react';
-import { ExperienceItemProps } from './types';
-import Markdown from '../markdown';
+import { Markdown } from '#/components/markdown';
 import * as styled from './styles';
+import { ExperienceItemProps } from './types';
 
-export const ExperienceItem: React.FC<ExperienceItemProps> = ({
+export const ExperienceItem = ({
   title,
   company,
   duration,
   description,
-}) => {
+}: ExperienceItemProps) => {
   const heading = `${duration}: ${title} @ ${company}`;
   return (
     <styled.Item>
@@ -17,5 +17,3 @@ export const ExperienceItem: React.FC<ExperienceItemProps> = ({
     </styled.Item>
   );
 };
-
-export default ExperienceItem;

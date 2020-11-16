@@ -1,16 +1,16 @@
 import React from 'react';
-import Wrap from '../wrap';
-import SkillTopic from '../skill-topic';
-import { SkillsProps } from './types';
+import { SkillTopic } from '#/components/skill-topic';
+import { Wrap } from '#/components/wrap';
 import * as styled from './styles';
+import { SkillsProps } from './types';
 
-export const Skills: React.FC<SkillsProps> = ({ title, skills }) => {
+export const Skills = ({ title, skills }: SkillsProps) => {
   return (
     <styled.Skills>
       <Wrap>
         <styled.Heading>{title}</styled.Heading>
         <div>
-          {skills.map(skill => (
+          {skills.map((skill) => (
             <SkillTopic key={skill.id} {...skill} />
           ))}
         </div>
@@ -18,5 +18,3 @@ export const Skills: React.FC<SkillsProps> = ({ title, skills }) => {
     </styled.Skills>
   );
 };
-
-export default Skills;

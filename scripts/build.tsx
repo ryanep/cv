@@ -1,12 +1,12 @@
 import fs from 'fs';
 import path from 'path';
 import { config } from 'dotenv-safe';
+import fetch from 'node-fetch';
 import React, { createElement } from 'react';
 import { renderToString } from 'react-dom/server';
 import { ServerStyleSheet, StyleSheetManager } from 'styled-components';
-import fetch from 'node-fetch';
+import { Home } from '../src/pages/home';
 import { Data } from '../src/types/data';
-import Home from '../src/pages/home';
 
 config();
 
@@ -23,7 +23,7 @@ const App: React.FC<AppProps> = ({ data, sheet }) => {
   );
 };
 
-const fetchData = async (url: string): Promise<Data> => {
+const fetchData = async (url: string): Promise<Data | null> => {
   if (process.env.NODE_ENV === 'development') {
     const data = await fs.promises.readFile(
       path.join(process.cwd(), './data/cv.json'),
@@ -35,7 +35,7 @@ const fetchData = async (url: string): Promise<Data> => {
 
   const response = await fetch(url);
   if (response.ok) {
-    const data: Data = await response.json();
+    const data = (await response.json()) as Data;
     return data;
   }
 
@@ -44,7 +44,15 @@ const fetchData = async (url: string): Promise<Data> => {
 
 const init = async () => {
   const url = process.env.DATA_URL;
+
+  if (!url) {
+    process.exit(1);
+  }
+
   const data = await fetchData(url);
+
+  if (!data) return;
+
   const sheet = new ServerStyleSheet();
   const document = createElement(App, {
     data,

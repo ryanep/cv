@@ -1,16 +1,16 @@
 import React from 'react';
-import Wrap from '../wrap';
-import ExperienceItem from '../experience-item';
-import { ExperienceProps } from './types';
+import { ExperienceItem } from '#/components/experience-item';
+import { Wrap } from '#/components/wrap';
 import * as styled from './styles';
+import { ExperienceProps } from './types';
 
-export const Experience: React.FC<ExperienceProps> = ({ title, items }) => {
+export const Experience = ({ title, items }: ExperienceProps) => {
   return (
     <styled.Section>
       <Wrap>
         <styled.Heading>{title}</styled.Heading>
         <styled.Content>
-          {items.map(item => (
+          {items.map((item) => (
             <ExperienceItem key={item.id} {...item} />
           ))}
         </styled.Content>
@@ -18,5 +18,3 @@ export const Experience: React.FC<ExperienceProps> = ({ title, items }) => {
     </styled.Section>
   );
 };
-
-export default Experience;
