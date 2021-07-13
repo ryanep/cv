@@ -60,16 +60,5 @@
     "ts-jest": "^24.2.0",
     "ts-node": "^8.5.4",
     "typescript": "^3.7.3"
-  },
-  "lint-staged": {
-    "*.js": [
-      "eslint",
-      "prettier --write --single-quote",
-      "git add"
-    ],
-    "*.scss": [
-      "stylelint --fix",
-      "git add"
-    ]
   }
 }

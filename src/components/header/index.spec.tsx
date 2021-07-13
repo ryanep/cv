@@ -11,6 +11,7 @@ describe('<Header />', () => {
     },
     links: [
       {
+        id: '1',
         title: '__LINK_TITLE__',
         url: '__LINK_URL__',
       },
