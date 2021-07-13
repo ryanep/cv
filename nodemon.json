@@ -1,5 +1,5 @@
 {
   "exec": "NODE_ENV=development yarn build && serve -p 3000 ./dist",
   "watch": ["src", "data"],
-  "ext": "ts,tsx"
+  "ext": "ts,tsx,json"
 }
