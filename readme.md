@@ -1,6 +1,14 @@
-# cv
+<p align="center">
+  <img width=100 height=100 alt="Screenshot" src="docs/icon.svg">
+</p>
+<div align="center">
+  <h1>CV</h1>
+  <p>A clean, static, personal curriculum vitae.</p>
+</div>
 
-This project is a simple, custom statically built personal curriculum vitae.
+# Introduction
+
+This project is a custom statically built personal curriculum vitae.
 
 ## Prerequisites
 
