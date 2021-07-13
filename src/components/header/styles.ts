@@ -21,7 +21,7 @@ export const Heading = styled.h1`
 export const Name = styled.div`
   color: white;
   font-size: 2.4rem;
-  font-weight: bold;
+  font-weight: 900;
 `;
 
 export const Title = styled.div`

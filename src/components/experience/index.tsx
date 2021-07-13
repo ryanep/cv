@@ -1,4 +1,3 @@
-import React from 'react';
 import { ExperienceItem } from '#/components/experience-item';
 import { Wrap } from '#/components/wrap';
 import * as styled from './styles';

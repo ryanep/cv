@@ -1,4 +1,3 @@
-import React from 'react';
 import { SkillTopic } from '#/components/skill-topic';
 import { Wrap } from '#/components/wrap';
 import * as styled from './styles';

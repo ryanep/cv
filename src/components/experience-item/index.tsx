@@ -1,4 +1,3 @@
-import React from 'react';
 import { Markdown } from '#/components/markdown';
 import * as styled from './styles';
 import { ExperienceItemProps } from './types';

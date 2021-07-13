@@ -34,6 +34,7 @@ const fetchData = async (url: string): Promise<Data | null> => {
   }
 
   const response = await fetch(url);
+
   if (response.ok) {
     const data = (await response.json()) as Data;
     return data;
@@ -51,7 +52,9 @@ const init = async () => {
 
   const data = await fetchData(url);
 
-  if (!data) return;
+  if (!data) {
+    process.exit(1);
+  }
 
   const sheet = new ServerStyleSheet();
   const document = createElement(App, {
@@ -78,6 +81,7 @@ const init = async () => {
   await fs.promises.mkdir(path.join(process.cwd(), './dist'), {
     recursive: true,
   });
+
   await fs.promises.writeFile(
     path.join(process.cwd(), './dist/index.html'),
     output,

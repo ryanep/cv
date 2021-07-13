@@ -1,4 +1,3 @@
-import React from 'react';
 import { EducationItem } from '#/components/education-item';
 import { Wrap } from '#/components/wrap';
 import * as styled from './styles';

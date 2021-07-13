@@ -1,4 +1,3 @@
-import React from 'react';
 import * as styled from './styles';
 
 const getRandomNumber = (length: number, start: number = 1) => {
