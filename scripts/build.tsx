@@ -3,7 +3,7 @@ import path from 'path';
 import React, { createElement } from 'react';
 import { renderToString } from 'react-dom/server';
 import { ServerStyleSheet, StyleSheetManager } from 'styled-components';
-import { cvData } from '../data/cv';
+import fetch from 'node-fetch';
 import { Data } from '../src/types/data';
 import Home from '../src/pages/home';
 
@@ -20,11 +20,22 @@ const App: React.FC<AppProps> = ({ data, sheet }) => {
   );
 };
 
-const init = async () => {
-  const sheet = new ServerStyleSheet();
+const fetchData = async (url: string): Promise<Data> => {
+  const response = await fetch(url);
+  if (response.ok) {
+    const data: Data = await response.json();
+    return data;
+  }
 
+  return null;
+};
+
+const init = async () => {
+  const url = process.env.DATA_URL;
+  const data = await fetchData(url);
+  const sheet = new ServerStyleSheet();
   const document = createElement(App, {
-    data: cvData,
+    data,
     sheet,
   });
   const html = renderToString(document);
@@ -32,8 +43,10 @@ const init = async () => {
   sheet.seal();
 
   const output = `<!doctype html>
-<html>
+<html lang="en">
 <head>
+  <meta charset="utf-8" />
+  <title>CV - Ryan Elliott-Potter</title>
   ${styles}
 </head>
 <body>
