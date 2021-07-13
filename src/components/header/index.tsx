@@ -1,4 +1,3 @@
-import React from 'react';
 import { Bubbles } from '#/components/bubbles';
 import { Wrap } from '#/components/wrap';
 import * as styled from './styles';

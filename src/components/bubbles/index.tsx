@@ -1,4 +1,3 @@
-import React from 'react';
 import { Bubble } from '#/components/bubble';
 import * as styled from './styles';
 

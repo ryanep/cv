@@ -1,4 +1,3 @@
-import React from 'react';
 import { Wrap } from '#/components/wrap';
 import * as styled from './styles';
 import { ProfileProps } from './types';

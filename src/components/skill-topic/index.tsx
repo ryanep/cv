@@ -1,4 +1,3 @@
-import React from 'react';
 import * as styled from './styles';
 import { SkillTopicProps } from './types';
 

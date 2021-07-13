@@ -19,11 +19,13 @@
     "@typescript-eslint/indent": 0,
     "@typescript-eslint/quotes": 0,
     "react/prop-types": 0,
+    "react/react-in-jsx-scope": 0,
     "react/jsx-props-no-spreading": 0,
     "import/no-named-as-default": 0,
     "import/no-extraneous-dependencies": 0,
     "import/prefer-default-export": 0,
     "import/extensions": 0,
+    "arrow-body-style": 0,
     "import/order": [
       "error",
       {

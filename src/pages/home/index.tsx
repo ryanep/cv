@@ -1,4 +1,3 @@
-import React from 'react';
 import { Education } from '#/components/education';
 import { Experience } from '#/components/experience';
 import { Header } from '#/components/header';
@@ -20,8 +19,8 @@ export const Home = ({
 }: HomeProps) => {
   return (
     <Root>
+      <Header {...header} />
       <main>
-        <Header {...header} />
         <Profile {...profile} />
         <Experience {...experience} />
         <Education {...education} />
