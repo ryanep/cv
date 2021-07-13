@@ -1,9 +1,3 @@
-export interface HomeProps {
-  header: any;
-  profile: any;
-  experience: any;
-  education: any;
-  skills: any;
-  membership: any;
-  references: any;
-}
+import { Data } from '#/types/data';
+
+export interface HomeProps extends Data {}

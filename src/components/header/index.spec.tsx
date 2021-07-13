@@ -1,7 +1,7 @@
+import { render, screen } from '@testing-library/react';
 import React from 'react';
-import { render } from '@testing-library/react';
-import Header from '.';
 import { HeaderProps } from './types';
+import Header from '.';
 
 describe('<Header />', () => {
   const props: HeaderProps = {
@@ -19,8 +19,8 @@ describe('<Header />', () => {
   };
 
   it('should render header element', () => {
-    const { queryByTestId } = render(<Header {...props} />);
-    const header = queryByTestId('header');
-    expect(header).not.toBeNull();
+    render(<Header {...props} />);
+    const header = screen.getByRole('header');
+    expect(header).toBeInTheDocument();
   });
 });

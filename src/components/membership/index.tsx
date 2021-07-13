@@ -1,12 +1,9 @@
 import React from 'react';
-import Wrap from '../wrap';
-import { MembershipProps } from './types';
+import { Wrap } from '#/components/wrap';
 import * as styled from './styles';
+import { MembershipProps } from './types';
 
-export const Membership: React.FC<MembershipProps> = ({
-  title,
-  description,
-}) => {
+export const Membership = ({ title, description }: MembershipProps) => {
   return (
     <styled.Membership>
       <Wrap>
@@ -18,5 +15,3 @@ export const Membership: React.FC<MembershipProps> = ({
     </styled.Membership>
   );
 };
-
-export default Membership;

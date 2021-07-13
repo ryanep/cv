@@ -5,6 +5,9 @@
   "env": {
     "browser": true
   },
+  "parserOptions": {
+    "project": "tsconfig.json"
+  },
   "settings": {
     "import/resolver": {
       "node": {
@@ -13,10 +16,36 @@
     }
   },
   "rules": {
+    "@typescript-eslint/indent": 0,
+    "@typescript-eslint/quotes": 0,
     "react/prop-types": 0,
     "react/jsx-props-no-spreading": 0,
     "import/no-named-as-default": 0,
     "import/no-extraneous-dependencies": 0,
-    "import/prefer-default-export": 0
+    "import/prefer-default-export": 0,
+    "import/extensions": 0,
+    "import/order": [
+      "error",
+      {
+        "groups": [
+          "builtin",
+          "external",
+          "internal",
+          "parent",
+          "sibling",
+          "index"
+        ],
+        "alphabetize": {
+          "order": "asc",
+          "caseInsensitive": true
+        },
+        "pathGroups": [
+          {
+            "pattern": "#/**",
+            "group": "internal"
+          }
+        ]
+      }
+    ]
   }
 }

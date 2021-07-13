@@ -1,15 +1,15 @@
 import React from 'react';
-import Root from '../../components/root';
-import Header from '../../components/header';
-import Profile from '../../components/profile';
-import Experience from '../../components/experience';
-import Education from '../../components/education';
-import Skills from '../../components/skills';
-import Membership from '../../components/membership';
-import References from '../../components/references';
+import { Education } from '#/components/education';
+import { Experience } from '#/components/experience';
+import { Header } from '#/components/header';
+import { Membership } from '#/components/membership';
+import { Profile } from '#/components/profile';
+import { References } from '#/components/references';
+import { Root } from '#/components/root';
+import { Skills } from '#/components/skills';
 import { HomeProps } from './types';
 
-export const Home: React.FC<HomeProps> = ({
+export const Home = ({
   header,
   profile,
   experience,
@@ -17,7 +17,7 @@ export const Home: React.FC<HomeProps> = ({
   skills,
   membership,
   references,
-}) => {
+}: HomeProps) => {
   return (
     <Root>
       <main>
@@ -32,5 +32,3 @@ export const Home: React.FC<HomeProps> = ({
     </Root>
   );
 };
-
-export default Home;

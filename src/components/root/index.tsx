@@ -2,7 +2,7 @@ import React from 'react';
 import * as styled from './styles';
 import { RootProps } from './types';
 
-export const Root: React.FC<RootProps> = ({ children }) => {
+export const Root = ({ children }: RootProps) => {
   return (
     <div>
       <styled.Global />
@@ -10,5 +10,3 @@ export const Root: React.FC<RootProps> = ({ children }) => {
     </div>
   );
 };
-
-export default Root;
