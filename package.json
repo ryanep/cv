@@ -44,7 +44,7 @@
     "husky": "^4.3.0",
     "jest": "^27.0.6",
     "lint-staged": "^11.0.1",
-    "node-fetch": "^2.6.1",
+    "node-fetch": "^2.6.7",
     "nodemon": "^2.0.12",
     "postcss": "^8.3.5",
     "postcss-jsx": "^0.36.4",
