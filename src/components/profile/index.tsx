@@ -1,6 +1,6 @@
-import { Wrap } from '#/components/wrap';
-import * as styled from './styles';
-import { ProfileProps } from './types';
+import { Wrap } from "#/components/wrap";
+import * as styled from "./styles";
+import { ProfileProps } from "./types";
 
 export const Profile = ({ title, description }: ProfileProps) => {
   return (

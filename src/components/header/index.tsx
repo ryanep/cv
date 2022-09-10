@@ -1,7 +1,7 @@
-import { Bubbles } from '#/components/bubbles';
-import { Wrap } from '#/components/wrap';
-import * as styled from './styles';
-import { HeaderProps } from './types';
+import { Bubbles } from "#/components/bubbles";
+import { Wrap } from "#/components/wrap";
+import * as styled from "./styles";
+import { HeaderProps } from "./types";
 
 export const Header = ({ title, links }: HeaderProps) => {
   return (

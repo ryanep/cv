@@ -1,6 +1,6 @@
-import { Wrap } from '#/components/wrap';
-import * as styled from './styles';
-import { MembershipProps } from './types';
+import { Wrap } from "#/components/wrap";
+import * as styled from "./styles";
+import { MembershipProps } from "./types";
 
 export const Membership = ({ title, description }: MembershipProps) => {
   return (

@@ -1,7 +1,7 @@
-import { EducationItem } from '#/components/education-item';
-import { Wrap } from '#/components/wrap';
-import * as styled from './styles';
-import { EducationProps } from './types';
+import { EducationItem } from "#/components/education-item";
+import { Wrap } from "#/components/wrap";
+import * as styled from "./styles";
+import { EducationProps } from "./types";
 
 export const Education = ({ title, items }: EducationProps) => {
   return (

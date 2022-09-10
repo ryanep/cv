@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import styled from "styled-components";
 
 export const Education = styled.section`
   margin-bottom: 1.5rem;

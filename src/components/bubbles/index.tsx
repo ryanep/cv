@@ -1,5 +1,5 @@
-import { Bubble } from '#/components/bubble';
-import * as styled from './styles';
+import { Bubble } from "#/components/bubble";
+import * as styled from "./styles";
 
 export const Bubbles = () => {
   const bubbleArray = [...new Array(10)].map((item, index) => index);

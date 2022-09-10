@@ -1,5 +1,5 @@
-import * as styled from './styles';
-import { SkillTopicProps } from './types';
+import * as styled from "./styles";
+import { SkillTopicProps } from "./types";
 
 export const SkillTopic = ({ title, skills }: SkillTopicProps) => {
   return (
@@ -8,7 +8,7 @@ export const SkillTopic = ({ title, skills }: SkillTopicProps) => {
       <ul>
         {skills.map((skill, index) => (
           <styled.Skill key={skill}>
-            {!!index && ', '}
+            {!!index && ", "}
             {skill}
           </styled.Skill>
         ))}

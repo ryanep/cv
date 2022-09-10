@@ -1,12 +1,12 @@
-import { Education } from '#/components/education';
-import { Experience } from '#/components/experience';
-import { Header } from '#/components/header';
-import { Membership } from '#/components/membership';
-import { Profile } from '#/components/profile';
-import { References } from '#/components/references';
-import { Root } from '#/components/root';
-import { Skills } from '#/components/skills';
-import { HomeProps } from './types';
+import { Education } from "#/components/education";
+import { Experience } from "#/components/experience";
+import { Header } from "#/components/header";
+import { Membership } from "#/components/membership";
+import { Profile } from "#/components/profile";
+import { References } from "#/components/references";
+import { Root } from "#/components/root";
+import { Skills } from "#/components/skills";
+import { HomeProps } from "./types";
 
 export const Home = ({
   header,

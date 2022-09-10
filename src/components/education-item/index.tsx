@@ -1,5 +1,5 @@
-import * as styled from './styles';
-import { EducationItemProps } from './types';
+import * as styled from "./styles";
+import { EducationItemProps } from "./types";
 
 export const EducationItem = ({
   title,

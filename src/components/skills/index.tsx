@@ -1,7 +1,7 @@
-import { SkillTopic } from '#/components/skill-topic';
-import { Wrap } from '#/components/wrap';
-import * as styled from './styles';
-import { SkillsProps } from './types';
+import { SkillTopic } from "#/components/skill-topic";
+import { Wrap } from "#/components/wrap";
+import * as styled from "./styles";
+import { SkillsProps } from "./types";
 
 export const Skills = ({ title, skills }: SkillsProps) => {
   return (

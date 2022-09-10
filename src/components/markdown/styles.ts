@@ -1,5 +1,5 @@
-import ReactMarkdown from 'react-markdown';
-import styled from 'styled-components';
+import ReactMarkdown from "react-markdown";
+import styled from "styled-components";
 
 export const Markdown = styled(ReactMarkdown)`
   p {

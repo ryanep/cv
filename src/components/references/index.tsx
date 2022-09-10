@@ -1,6 +1,6 @@
-import { Wrap } from '#/components/wrap';
-import * as styled from './styles';
-import { ReferencesProps } from './types';
+import { Wrap } from "#/components/wrap";
+import * as styled from "./styles";
+import { ReferencesProps } from "./types";
 
 export const References = ({ title, description }: ReferencesProps) => {
   return (

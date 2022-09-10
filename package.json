@@ -9,7 +9,7 @@
   "scripts": {
     "dev": "cross-env NODE_ENV=development nodemon",
     "build": "node -r ts-node/register -r tsconfig-paths/register ./scripts/build",
-    "fmt": "prettier --write --single-quote './src/**/*.{ts,tsx}'",
+    "fmt": "prettier --write './src/**/*.{ts,tsx}'",
     "lint:css": "stylelint --custom-syntax postcss-jsx './src/**/styles.ts'",
     "lint:js": "eslint '**/*.{ts,tsx}'",
     "lint": "npm run lint:css && npm run lint:js",
@@ -17,6 +17,7 @@
     "precommit": "lint-staged"
   },
   "devDependencies": {
+    "@ryanep/prettier-config": "^1.0.2",
     "@testing-library/jest-dom": "^5.14.1",
     "@testing-library/react": "^12.0.0",
     "@types/dotenv-safe": "^8.1.2",
@@ -49,7 +50,7 @@
     "postcss": "^8.3.5",
     "postcss-jsx": "^0.36.4",
     "postcss-syntax": "^0.36.2",
-    "prettier": "^2.3.2",
+    "prettier": "^2.7.1",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
     "react-markdown": "^6.0.2",

@@ -1,6 +1,6 @@
-import { Markdown } from '#/components/markdown';
-import * as styled from './styles';
-import { ExperienceItemProps } from './types';
+import { Markdown } from "#/components/markdown";
+import * as styled from "./styles";
+import { ExperienceItemProps } from "./types";
 
 export const ExperienceItem = ({
   title,

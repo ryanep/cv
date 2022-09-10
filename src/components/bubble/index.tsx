@@ -1,4 +1,4 @@
-import * as styled from './styles';
+import * as styled from "./styles";
 
 const getRandomNumber = (length: number, start: number = 1) => {
   return Math.floor(Math.random() * (length - start) + start);

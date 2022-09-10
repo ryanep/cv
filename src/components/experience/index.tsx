@@ -1,7 +1,7 @@
-import { ExperienceItem } from '#/components/experience-item';
-import { Wrap } from '#/components/wrap';
-import * as styled from './styles';
-import { ExperienceProps } from './types';
+import { ExperienceItem } from "#/components/experience-item";
+import { Wrap } from "#/components/wrap";
+import * as styled from "./styles";
+import { ExperienceProps } from "./types";
 
 export const Experience = ({ title, items }: ExperienceProps) => {
   return (
