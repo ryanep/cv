@@ -1,5 +1,5 @@
 export interface EducationProps {
-  title: string;
+  heading: string;
   items: {
     id: string;
     title: string;

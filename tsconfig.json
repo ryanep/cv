@@ -1,19 +1,15 @@
 {
   "compilerOptions": {
+    "baseUrl": "./src",
     "esModuleInterop": true,
-    "module": "commonjs",
-    "moduleResolution": "node",
-    "noImplicitAny": true,
-    "noUnusedLocals": true,
-    "skipLibCheck": true,
-    "outDir": "dist",
-    "sourceMap": true,
-    "target": "es2015",
     "jsx": "react-jsx",
     "lib": ["es6", "esnext.asynciterable"],
-    "baseUrl": "./src",
-    "strict": true,
-    "strictNullChecks": true,
+    "module": "commonjs",
+    "moduleResolution": "node",
+    "noEmit": true,
+    "noImplicitAny": true,
+    "noUnusedLocals": true,
+    "outDir": "dist",
     "paths": {
       "#/*": ["./*"]
     },
@@ -21,8 +17,13 @@
       {
         "transform": "typescript-transform-paths"
       }
-    ]
+    ],
+    "skipLibCheck": true,
+    "sourceMap": true,
+    "strict": true,
+    "strictNullChecks": true,
+    "target": "es2015"
   },
-  "include": ["./src", "./scripts", "jest.config.ts"],
-  "exclude": ["node_modules", "**/*.spec.ts"]
+  "exclude": ["node_modules"],
+  "include": ["./src", "./jest", "./scripts", "jest.config.ts"]
 }

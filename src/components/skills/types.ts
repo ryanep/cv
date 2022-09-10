@@ -1,5 +1,5 @@
 export interface SkillsProps {
-  title: string;
+  heading: string;
   skills: {
     id: string;
     title: string;

@@ -1,4 +1,4 @@
 export interface MembershipProps {
-  title: string;
+  heading: string;
   description: string;
 }
