@@ -6,18 +6,12 @@ import { minify } from "html-minifier";
 import { createElement } from "react";
 import { renderToString } from "react-dom/server";
 import { Home, type HomeProps } from "#/pages/home";
+import { cvData } from "../data/cv";
 
 config();
 
 const fetchData = async (url: string): Promise<HomeProps | null> => {
   if (process.env.NODE_ENV === "development") {
-    const data = await fs.promises.readFile(
-      path.join(process.cwd(), "./data/cv.json"),
-      "utf8"
-    );
-
-    const cvData = JSON.parse(data);
-
     return cvData;
   }
 

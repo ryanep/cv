@@ -25,5 +25,5 @@
     "target": "es2015"
   },
   "exclude": ["node_modules"],
-  "include": ["./src", "./jest", "./scripts", "jest.config.ts"]
+  "include": ["./src", "./jest", "./scripts", "./data", "jest.config.ts"]
 }
