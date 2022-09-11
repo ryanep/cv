@@ -15,8 +15,8 @@ jobs:
       - uses: actions/setup-node@v1
         with:
           node-version: '12.13.1'
-      - run: yarn
-      - run: yarn lint
+      - run: npm install
+      - run: npm run lint
   build:
     name: Build
     runs-on: ${{ matrix.operating-system }}
@@ -28,8 +28,8 @@ jobs:
       - uses: actions/setup-node@v1
         with:
           node-version: '12.13.1'
-      - run: yarn
-      - run: yarn build
+      - run: npm install
+      - run: npm run build
         env:
           DATA_URL: ${{ secrets.DATA_URL }}
       - uses: actions/upload-artifact@master
