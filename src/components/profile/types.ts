@@ -1,4 +1,4 @@
 export interface ProfileProps {
-  title: string;
+  heading: string;
   description: string;
 }

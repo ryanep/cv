@@ -1,5 +1,5 @@
 export interface ExperienceProps {
-  title: string;
+  heading: string;
   items: {
     id: string;
     company: string;

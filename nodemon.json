@@ -1,5 +1,6 @@
 {
-  "exec": "NODE_ENV=development yarn build && serve -p 3000 ./dist",
+  "exec": "NODE_ENV=development yarn build && yarn build:tailwind && serve -p 3000 ./dist",
   "watch": ["src", "data"],
-  "ext": "ts,tsx,json"
+  "ext": "ts,tsx,json",
+  "delay": 1000
 }
