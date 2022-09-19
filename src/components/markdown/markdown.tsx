@@ -1,14 +1,21 @@
+import type { HTMLAttributes } from "react";
 import ReactMarkdown from "react-markdown";
 import type { MarkdownProps } from "./types";
+
+const Paragraph = ({ children }: HTMLAttributes<unknown>) => {
+  return <p className="mb-4">{children}</p>;
+};
+
+const UnorderedList = ({ children }: HTMLAttributes<unknown>) => {
+  return <ul className="list-disc pl-5">{children}</ul>;
+};
 
 export const Markdown = ({ source }: MarkdownProps) => {
   return (
     <ReactMarkdown
       components={{
-        p: ({ node, ...props }) => <p {...props} className="mb-4" />,
-        ul: ({ node, depth, ordered, ...props }) => (
-          <ul {...props} className="list-disc pl-5" />
-        ),
+        p: Paragraph,
+        ul: UnorderedList,
       }}
     >
       {source}

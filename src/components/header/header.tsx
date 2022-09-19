@@ -13,11 +13,11 @@ export const Header = ({ title, links }: HeaderProps) => {
           <div>
             {links.map((link) => (
               <a
-                key={link.id}
-                href={link.url}
-                target="_blank"
-                rel="noopener noreferrer"
                 className="block hover:underline"
+                href={link.url}
+                key={link.id}
+                rel="noopener noreferrer"
+                target="_blank"
               >
                 {link.title}
               </a>

@@ -1,8 +1,8 @@
-import fs from "fs";
-import path from "path";
-import fetch from "node-fetch";
+import fs from "node:fs";
+import path from "node:path";
 import { config } from "dotenv-safe";
 import { minify } from "html-minifier";
+import fetch from "node-fetch";
 import { createElement } from "react";
 import { renderToString } from "react-dom/server";
 import { Home, type HomeProps } from "#/pages/home";
@@ -10,7 +10,7 @@ import { cvData } from "../data/cv";
 
 config();
 
-const fetchData = async (url: string): Promise<HomeProps | null> => {
+const fetchData = async (url: string): Promise<HomeProps | undefined> => {
   if (process.env.NODE_ENV === "development") {
     return cvData;
   }
@@ -18,7 +18,7 @@ const fetchData = async (url: string): Promise<HomeProps | null> => {
   const response = await fetch(url);
 
   if (!response.ok) {
-    return null;
+    return undefined;
   }
 
   const data = (await response.json()) as HomeProps;
@@ -30,13 +30,13 @@ const main = async () => {
   const url = process.env.DATA_URL;
 
   if (!url) {
-    process.exit(1);
+    throw new Error("Invalid URL.");
   }
 
   const data = await fetchData(url);
 
   if (!data) {
-    process.exit(1);
+    throw new Error("Invalid data.");
   }
 
   const document = createElement(Home, data);
@@ -69,4 +69,8 @@ const main = async () => {
   );
 };
 
-main();
+main()
+  .then(() => {
+    console.log("Build successful.");
+  })
+  .catch((error) => console.log("An error occurred.", error));

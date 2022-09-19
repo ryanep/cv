@@ -14,9 +14,7 @@ export const EducationItem = ({
 
       <ul className="list-disc pl-5">
         {grades.map((grade) => (
-          <li key={grade.id}>
-            {grade.title}: {grade.grade}
-          </li>
+          <li key={grade.id}>{`${grade.title}: ${grade.grade}`}</li>
         ))}
       </ul>
     </section>

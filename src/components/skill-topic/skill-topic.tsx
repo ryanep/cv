@@ -7,7 +7,7 @@ export const SkillTopic = ({ title, skills }: SkillTopicProps) => {
 
       <ul>
         {skills.map((skill, index) => (
-          <li key={skill} className="inline">
+          <li className="inline" key={skill}>
             {!!index && ", "}
             {skill}
           </li>

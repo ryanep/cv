@@ -19,20 +19,20 @@ export const Home = ({
 }: HomeProps) => {
   return (
     <Root>
-      <Header title={header.title} links={header.links} />
+      <Header links={header.links} title={header.title} />
 
       <main>
-        <Profile heading={profile.heading} description={profile.description} />
+        <Profile description={profile.description} heading={profile.heading} />
         <Experience heading={experience.heading} items={experience.items} />
         <Education heading={education.heading} items={education.items} />
         <Skills heading={skills.heading} skills={skills.skills} />
         <Membership
-          heading={membership.heading}
           description={membership.description}
+          heading={membership.heading}
         />
         <References
-          heading={references.heading}
           description={references.description}
+          heading={references.heading}
         />
       </main>
     </Root>

@@ -16,7 +16,7 @@ describe("<Header />", () => {
   ];
 
   it("should render header element", () => {
-    render(<Header title={defaultTitle} links={defaultLinks} />);
+    render(<Header links={defaultLinks} title={defaultTitle} />);
 
     const header = screen.getByRole("banner");
 

@@ -7,7 +7,13 @@ export const Education = ({ heading, items }: EducationProps) => {
     <Section heading={heading}>
       <div>
         {items.map((item) => (
-          <EducationItem key={item.id} {...item} />
+          <EducationItem
+            course={item.course}
+            date={item.date}
+            grades={item.grades}
+            key={item.id}
+            title={item.title}
+          />
         ))}
       </div>
     </Section>
