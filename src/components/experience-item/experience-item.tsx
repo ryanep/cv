@@ -2,10 +2,10 @@ import { Markdown } from "#/components/markdown";
 import type { ExperienceItemProps } from "./types";
 
 export const ExperienceItem = ({
-  title,
   company,
-  duration,
   description,
+  duration,
+  title,
 }: ExperienceItemProps) => {
   const heading = `${duration}: ${title} @ ${company}`;
 

@@ -1,14 +1,14 @@
 export interface EducationProps {
   heading: string;
   items: {
-    id: string;
-    title: string;
     course: string;
     date: string;
     grades: {
+      grade: string;
       id: string;
       title: string;
-      grade: string;
     }[];
+    id: string;
+    title: string;
   }[];
 }

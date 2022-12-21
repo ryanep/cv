@@ -1,7 +1,7 @@
 import { Wrap } from "#/components/wrap";
 import type { HeaderProps } from "./types";
 
-export const Header = ({ title, links }: HeaderProps) => {
+export const Header = ({ links, title }: HeaderProps) => {
   return (
     <header className="relative py-5 overflow-hidden bg-primary text-white">
       <Wrap>

@@ -9,13 +9,13 @@ import { Skills } from "#/components/skills";
 import type { HomeProps } from "./types";
 
 export const Home = ({
-  header,
-  profile,
-  experience,
   education,
-  skills,
+  experience,
+  header,
   membership,
+  profile,
   references,
+  skills,
 }: HomeProps) => {
   return (
     <Root>

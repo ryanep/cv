@@ -1,10 +1,10 @@
 export interface ExperienceProps {
   heading: string;
   items: {
-    id: string;
     company: string;
-    title: string;
     description: string;
     duration: string;
+    id: string;
+    title: string;
   }[];
 }

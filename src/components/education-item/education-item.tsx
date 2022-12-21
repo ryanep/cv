@@ -1,10 +1,10 @@
 import type { EducationItemProps } from "./types";
 
 export const EducationItem = ({
-  title,
   course,
   date,
   grades,
+  title,
 }: EducationItemProps) => {
   const heading = `${date}: ${course} @ ${title}`;
 

@@ -1,6 +1,6 @@
 export interface ExperienceItemProps {
-  title: string;
-  description: string;
   company: string;
+  description: string;
   duration: string;
+  title: string;
 }

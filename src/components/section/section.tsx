@@ -3,9 +3,9 @@ import { Wrap } from "#/components/wrap";
 import type { SectionProps } from "./types";
 
 export const Section = ({
-  heading,
-  children,
   background = "white",
+  children,
+  heading,
 }: SectionProps) => {
   return (
     <section
