@@ -73,4 +73,6 @@ main()
   .then(() => {
     console.log("Build successful.");
   })
-  .catch((error) => console.log("An error occurred.", error));
+  .catch((error) => {
+    console.log("An error occurred.", error);
+  });
