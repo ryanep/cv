@@ -15,7 +15,7 @@ export const Section = ({
       })}
     >
       <Wrap>
-        <h2 className="mb-4 text-2xl font-black">{heading}</h2>
+        <h2 className="mb-4 text-2xl font-bold">{heading}</h2>
 
         {children}
       </Wrap>

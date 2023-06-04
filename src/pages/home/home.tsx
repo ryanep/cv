@@ -23,9 +23,9 @@ export const Home = ({
 
       <main>
         <Profile description={profile.description} heading={profile.heading} />
+        <Skills heading={skills.heading} skills={skills.skills} />
         <Experience heading={experience.heading} items={experience.items} />
         <Education heading={education.heading} items={education.items} />
-        <Skills heading={skills.heading} skills={skills.skills} />
         <Membership
           description={membership.description}
           heading={membership.heading}

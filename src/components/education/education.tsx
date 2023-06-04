@@ -4,7 +4,7 @@ import type { EducationProps } from "./types";
 
 export const Education = ({ heading, items }: EducationProps) => {
   return (
-    <Section heading={heading}>
+    <Section background="grey" heading={heading}>
       <div>
         {items.map((item) => (
           <EducationItem

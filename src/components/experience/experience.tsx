@@ -4,7 +4,7 @@ import type { ExperienceProps } from "./types";
 
 export const Experience = ({ heading, items }: ExperienceProps) => {
   return (
-    <Section background="grey" heading={heading}>
+    <Section background="white" heading={heading}>
       {items.map((item) => (
         <ExperienceItem
           company={item.company}

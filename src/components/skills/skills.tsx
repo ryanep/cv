@@ -5,7 +5,7 @@ import type { SkillsProps } from "./types";
 export const Skills = ({ heading, skills }: SkillsProps) => {
   return (
     <Section background="grey" heading={heading}>
-      <div>
+      <div className="md:flex md:gap-4">
         {skills.map((skill) => (
           <SkillTopic
             key={skill.id}

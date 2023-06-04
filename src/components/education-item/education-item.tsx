@@ -6,17 +6,18 @@ export const EducationItem = ({
   grades,
   title,
 }: EducationItemProps) => {
-  const heading = `${date}: ${course} @ ${title}`;
-
   return (
     <section className="mb-4 last-of-type:mb-0">
-      <h2 className="text-base font-bold mb-2">{heading}</h2>
+      <h3 className="font-bold text-lg">
+        {title} <span className="font-normal text-base"> - {course}</span>
+      </h3>
 
-      <ul className="list-disc pl-5">
-        {grades.map((grade) => (
-          <li key={grade.id}>{`${grade.title}: ${grade.grade}`}</li>
-        ))}
-      </ul>
+      <div className="flex gap-1 text-sm">
+        <p className="uppercase font-medium shrink-0">{date} - </p>
+        <p>
+          {grades.map((grade) => `${grade.title}: ${grade.grade}`).join(", ")}
+        </p>
+      </div>
     </section>
   );
 };

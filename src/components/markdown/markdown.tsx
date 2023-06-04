@@ -10,11 +10,16 @@ const UnorderedList = ({ children }: HTMLAttributes<unknown>) => {
   return <ul className="list-disc pl-5">{children}</ul>;
 };
 
+const Strong = ({ children }: HTMLAttributes<unknown>) => {
+  return <strong className="font-semibold">{children}</strong>;
+};
+
 export const Markdown = ({ source }: MarkdownProps) => {
   return (
     <ReactMarkdown
       components={{
         p: Paragraph,
+        strong: Strong,
         ul: UnorderedList,
       }}
     >

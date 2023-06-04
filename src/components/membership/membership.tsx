@@ -3,7 +3,7 @@ import type { MembershipProps } from "./types";
 
 export const Membership = ({ description, heading }: MembershipProps) => {
   return (
-    <Section heading={heading}>
+    <Section background="white" heading={heading}>
       <p>{description}</p>
     </Section>
   );

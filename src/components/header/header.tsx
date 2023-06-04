@@ -7,7 +7,7 @@ export const Header = ({ links, title }: HeaderProps) => {
       <Wrap>
         <div className="flex flex-grow items-center z-10">
           <div className="flex-grow">
-            <h1 className="text-2xl font-black">{title.name}</h1>
+            <h1 className="text-2xl font-bold">{title.name}</h1>
             <p className="text-lg">{title.role}</p>
           </div>
           <div>
