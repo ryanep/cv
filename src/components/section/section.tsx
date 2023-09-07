@@ -9,13 +9,13 @@ export const Section = ({
 }: SectionProps) => {
   return (
     <section
-      className={clsx("flex flex-col py-5", {
+      className={clsx("flex flex-col py-3", {
         "bg-slate-50": background === "grey",
         "bg-white": background === "white",
       })}
     >
       <Wrap>
-        <h2 className="mb-4 text-2xl font-bold">{heading}</h2>
+        <h2 className="mb-1 text-lg font-bold">{heading}</h2>
 
         {children}
       </Wrap>
