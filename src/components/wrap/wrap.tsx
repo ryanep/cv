@@ -1,4 +1,8 @@
-import type { WrapProps } from "./types";
+import type { ReactNode } from "react";
+
+interface WrapProps {
+  readonly children: ReactNode;
+}
 
 export const Wrap = ({ children }: WrapProps) => {
   return (

@@ -1,4 +1,13 @@
-import type { EducationItemProps } from "./types";
+interface EducationItemProps {
+  readonly course: string;
+  readonly date: string;
+  readonly grades: {
+    grade: string;
+    id: string;
+    title: string;
+  }[];
+  readonly title: string;
+}
 
 export const EducationItem = ({
   course,

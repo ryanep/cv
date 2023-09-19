@@ -1,6 +1,20 @@
 import { EducationItem } from "#/components/education-item";
 import { Section } from "#/components/section";
-import type { EducationProps } from "./types";
+
+interface EducationProps {
+  readonly heading: string;
+  readonly items: {
+    course: string;
+    date: string;
+    grades: {
+      grade: string;
+      id: string;
+      title: string;
+    }[];
+    id: string;
+    title: string;
+  }[];
+}
 
 export const Education = ({ heading, items }: EducationProps) => {
   return (

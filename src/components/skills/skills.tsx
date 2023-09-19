@@ -1,6 +1,14 @@
 import { Section } from "#/components/section";
 import { SkillTopic } from "#/components/skill-topic";
-import type { SkillsProps } from "./types";
+
+interface SkillsProps {
+  readonly heading: string;
+  readonly skills: {
+    id: string;
+    skills: string[];
+    title: string;
+  }[];
+}
 
 export const Skills = ({ heading, skills }: SkillsProps) => {
   return (

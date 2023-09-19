@@ -6,7 +6,17 @@ import { Profile } from "#/components/profile";
 import { References } from "#/components/references";
 import { Root } from "#/components/root";
 import { Skills } from "#/components/skills";
-import type { HomeProps } from "./types";
+import type { ComponentProps } from "react";
+
+interface HomeProps {
+  readonly education: ComponentProps<typeof Education>;
+  readonly experience: ComponentProps<typeof Experience>;
+  readonly header: ComponentProps<typeof Header>;
+  readonly membership: ComponentProps<typeof Membership>;
+  readonly profile: ComponentProps<typeof Profile>;
+  readonly references: ComponentProps<typeof References>;
+  readonly skills: ComponentProps<typeof Skills>;
+}
 
 export const Home = ({
   education,

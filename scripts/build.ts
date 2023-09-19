@@ -5,14 +5,17 @@ import { minify } from "html-minifier";
 import fetch from "node-fetch";
 import { createElement } from "react";
 import { renderToString } from "react-dom/server";
-import { Home, type HomeProps } from "#/pages/home";
+import { Home } from "#/pages/home";
 import { cvData } from "../data/cv";
+import type { ComponentProps } from "react";
 
 config();
 
+type HomeProps = ComponentProps<typeof Home>;
+
 const fetchData = async (url: string): Promise<HomeProps | undefined> => {
   if (process.env.NODE_ENV === "development") {
-    return cvData;
+    return cvData as unknown as HomeProps;
   }
 
   const response = await fetch(url);

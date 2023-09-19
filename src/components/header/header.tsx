@@ -1,5 +1,16 @@
 import { Wrap } from "#/components/wrap";
-import type { HeaderProps } from "./types";
+
+interface HeaderProps {
+  readonly links: {
+    id: string;
+    title: string;
+    url: string;
+  }[];
+  readonly title: {
+    name: string;
+    role: string;
+  };
+}
 
 export const Header = ({ links, title }: HeaderProps) => {
   return (

@@ -1,4 +1,7 @@
-import type { SkillTopicProps } from "./types";
+interface SkillTopicProps {
+  readonly skills: string[];
+  readonly title: string;
+}
 
 export const SkillTopic = ({ skills, title }: SkillTopicProps) => {
   return (

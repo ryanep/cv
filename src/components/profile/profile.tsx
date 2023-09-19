@@ -1,5 +1,9 @@
 import { Section } from "#/components/section";
-import type { ProfileProps } from "./types";
+
+interface ProfileProps {
+  readonly description: string;
+  readonly heading: string;
+}
 
 export const Profile = ({ description, heading }: ProfileProps) => {
   return (

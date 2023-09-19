@@ -1,6 +1,16 @@
 import { ExperienceItem } from "#/components/experience-item";
 import { Section } from "#/components/section";
-import type { ExperienceProps } from "./types";
+
+interface ExperienceProps {
+  readonly heading: string;
+  readonly items: {
+    company: string;
+    description: string;
+    duration: string;
+    id: string;
+    title: string;
+  }[];
+}
 
 export const Experience = ({ heading, items }: ExperienceProps) => {
   return (

@@ -1,5 +1,9 @@
 import { Section } from "#/components/section";
-import type { ReferencesProps } from "./types";
+
+interface ReferencesProps {
+  readonly description: string;
+  readonly heading: string;
+}
 
 export const References = ({ description, heading }: ReferencesProps) => {
   return (

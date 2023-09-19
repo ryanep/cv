@@ -1,6 +1,12 @@
 import { clsx } from "clsx";
 import { Wrap } from "#/components/wrap";
-import type { SectionProps } from "./types";
+import type { ReactNode } from "react";
+
+interface SectionProps {
+  readonly background?: "grey" | "white";
+  readonly children: ReactNode;
+  readonly heading: string;
+}
 
 export const Section = ({
   background = "white",

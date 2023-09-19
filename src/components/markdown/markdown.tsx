@@ -1,6 +1,9 @@
 import ReactMarkdown from "react-markdown";
-import type { MarkdownProps } from "./types";
 import type { HTMLAttributes } from "react";
+
+interface MarkdownProps {
+  readonly source: string;
+}
 
 const Paragraph = ({ children }: HTMLAttributes<unknown>) => {
   return <p className="mb-4">{children}</p>;

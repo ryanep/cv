@@ -1,5 +1,9 @@
 import { Section } from "#/components/section";
-import type { MembershipProps } from "./types";
+
+interface MembershipProps {
+  readonly description: string;
+  readonly heading: string;
+}
 
 export const Membership = ({ description, heading }: MembershipProps) => {
   return (

@@ -1,5 +1,11 @@
 import { Markdown } from "#/components/markdown";
-import type { ExperienceItemProps } from "./types";
+
+export interface ExperienceItemProps {
+  readonly company: string;
+  readonly description: string;
+  readonly duration: string;
+  readonly title: string;
+}
 
 export const ExperienceItem = ({
   company,
