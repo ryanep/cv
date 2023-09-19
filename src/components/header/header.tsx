@@ -3,10 +3,10 @@ import type { HeaderProps } from "./types";
 
 export const Header = ({ links, title }: HeaderProps) => {
   return (
-    <header className="relative py-5 overflow-hidden bg-primary text-white">
+    <header className="relative overflow-hidden bg-primary py-5 text-white">
       <Wrap>
-        <div className="flex flex-grow items-center z-10">
-          <div className="flex-grow">
+        <div className="z-10 flex grow items-center">
+          <div className="grow">
             <h1 className="text-2xl font-bold">{title.name}</h1>
             <p className="text-lg">{title.role}</p>
           </div>

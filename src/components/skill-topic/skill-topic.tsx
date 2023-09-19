@@ -2,13 +2,13 @@ import type { SkillTopicProps } from "./types";
 
 export const SkillTopic = ({ skills, title }: SkillTopicProps) => {
   return (
-    <section className="mb-4 sm:mb-0 print:mb-0 last-of-type:mb-0">
-      <h2 className="text-base font-bold mb-2">{title}</h2>
+    <section className="mb-4 last-of-type:mb-0 print:mb-0 sm:mb-0">
+      <h2 className="mb-2 text-base font-bold">{title}</h2>
 
       <ul>
         {skills.map((skill, index) => (
           <li className="inline" key={skill}>
-            {!!index && ", "}
+            {Boolean(index) && ", "}
             {skill}
           </li>
         ))}
