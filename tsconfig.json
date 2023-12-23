@@ -1,6 +1,5 @@
 {
   "compilerOptions": {
-    "baseUrl": "./src",
     "esModuleInterop": true,
     "jsx": "react-jsx",
     "lib": ["es6", "esnext.asynciterable"],
@@ -11,7 +10,8 @@
     "noUnusedLocals": true,
     "outDir": "dist",
     "paths": {
-      "#/*": ["./*"]
+      "#/test-utils/*": ["./test-utils/*"],
+      "#/*": ["./src/*"]
     },
     "plugins": [
       {
@@ -25,5 +25,5 @@
     "target": "es2015"
   },
   "exclude": ["node_modules"],
-  "include": ["./src", "./jest", "./scripts", "./data", "jest.config.ts"]
+  "include": ["**/*"]
 }

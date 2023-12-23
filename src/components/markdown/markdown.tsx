@@ -1,10 +1,6 @@
 import ReactMarkdown from "react-markdown";
 import type { HTMLAttributes } from "react";
 
-interface MarkdownProps {
-  readonly source: string;
-}
-
 const Paragraph = ({ children }: HTMLAttributes<unknown>) => {
   return <p className="mb-4">{children}</p>;
 };
@@ -16,6 +12,10 @@ const UnorderedList = ({ children }: HTMLAttributes<unknown>) => {
 const Strong = ({ children }: HTMLAttributes<unknown>) => {
   return <strong className="font-semibold">{children}</strong>;
 };
+
+interface MarkdownProps {
+  readonly source: string;
+}
 
 export const Markdown = ({ source }: MarkdownProps) => {
   return (

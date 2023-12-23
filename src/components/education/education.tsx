@@ -19,17 +19,15 @@ interface EducationProps {
 export const Education = ({ heading, items }: EducationProps) => {
   return (
     <Section background="grey" heading={heading}>
-      <div>
-        {items.map((item) => (
-          <EducationItem
-            course={item.course}
-            date={item.date}
-            grades={item.grades}
-            key={item.id}
-            title={item.title}
-          />
-        ))}
-      </div>
+      {items.map((item) => (
+        <EducationItem
+          course={item.course}
+          date={item.date}
+          grades={item.grades}
+          key={item.id}
+          title={item.title}
+        />
+      ))}
     </Section>
   );
 };

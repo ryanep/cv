@@ -5,13 +5,13 @@ import { minify } from "html-minifier";
 import fetch from "node-fetch";
 import { createElement } from "react";
 import { renderToString } from "react-dom/server";
-import { Home } from "#/pages/home";
+import { HomePage } from "#/pages/home";
 import { cvData } from "../data/cv";
 import type { ComponentProps } from "react";
 
 config();
 
-type HomeProps = ComponentProps<typeof Home>;
+type HomeProps = ComponentProps<typeof HomePage>;
 
 const fetchData = async (url: string): Promise<HomeProps | undefined> => {
   if (process.env.NODE_ENV === "development") {
@@ -42,7 +42,7 @@ const main = async () => {
     throw new Error("Invalid data.");
   }
 
-  const document = createElement(Home, data);
+  const document = createElement(HomePage, data);
 
   const html = renderToString(document);
 

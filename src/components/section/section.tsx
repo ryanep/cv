@@ -1,4 +1,4 @@
-import { clsx } from "clsx";
+import { cx } from "classix";
 import { Wrap } from "#/components/wrap";
 import type { ReactNode } from "react";
 
@@ -15,10 +15,11 @@ export const Section = ({
 }: SectionProps) => {
   return (
     <section
-      className={clsx("flex flex-col py-3", {
-        "bg-slate-50": background === "grey",
-        "bg-white": background === "white",
-      })}
+      className={cx(
+        "flex flex-col py-3",
+        background === "grey" && "bg-slate-50",
+        background === "white" && "bg-white"
+      )}
     >
       <Wrap>
         <h2 className="mb-1 text-lg font-bold">{heading}</h2>
