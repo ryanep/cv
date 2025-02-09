@@ -17,8 +17,8 @@
     "precommit": "lint-staged"
   },
   "devDependencies": {
-    "@ryanep/eslint-config": "^0.9.1",
-    "@ryanep/prettier-config": "^1.0.2",
+    "@ryanep/eslint-config": "^1.10.2",
+    "@ryanep/prettier-config": "^1.2.2",
     "@swc/core": "^1.3.101",
     "@swc/jest": "^0.2.29",
     "@testing-library/jest-dom": "^6.1.3",
@@ -35,7 +35,7 @@
     "classix": "^2.1.35",
     "cross-env": "^7.0.3",
     "dotenv-safe": "^8.2.0",
-    "eslint": "^8.49.0",
+    "eslint": "^9.17.0",
     "html-minifier": "^4.0.0",
     "html-validate": "^8.7.4",
     "husky": "^8.0.1",
@@ -46,7 +46,7 @@
     "node-fetch": "^2.0.0",
     "nodemon": "^2.0.19",
     "postcss": "^8.4.16",
-    "prettier": "^2.7.1",
+    "prettier": "^3.4.2",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-markdown": "^6.0.0",
