@@ -14,7 +14,7 @@ interface HeaderProps {
 
 export const Header = ({ links, title }: HeaderProps) => {
   return (
-    <header className="relative overflow-hidden bg-primary py-5 text-white">
+    <header className="relative overflow-hidden bg-primary py-4 dark:bg-[#3c1f1f] print:py-0">
       <Wrap>
         <div className="z-10 flex grow items-center">
           <div className="grow">

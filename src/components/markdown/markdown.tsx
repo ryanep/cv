@@ -6,7 +6,7 @@ const Paragraph = ({ children }: HTMLAttributes<unknown>) => {
 };
 
 const UnorderedList = ({ children }: HTMLAttributes<unknown>) => {
-  return <ul className="list-disc pl-5">{children}</ul>;
+  return <ul className="list-disc pl-7">{children}</ul>;
 };
 
 const Strong = ({ children }: HTMLAttributes<unknown>) => {

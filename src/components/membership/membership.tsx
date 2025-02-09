@@ -7,7 +7,7 @@ interface MembershipProps {
 
 export const Membership = ({ description, heading }: MembershipProps) => {
   return (
-    <Section background="white" heading={heading}>
+    <Section heading={heading}>
       <p>{description}</p>
     </Section>
   );

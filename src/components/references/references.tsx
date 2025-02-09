@@ -7,7 +7,7 @@ interface ReferencesProps {
 
 export const References = ({ description, heading }: ReferencesProps) => {
   return (
-    <Section background="grey" heading={heading}>
+    <Section heading={heading}>
       <p>{description}</p>
     </Section>
   );

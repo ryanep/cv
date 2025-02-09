@@ -16,8 +16,8 @@ This project is a custom statically built personal curriculum vitae.
 
 ## Development
 
-To start development mode, run `yarn dev`. This builds the app, watch for changes and serves on port 3000.
+To start development mode, run `npm run dev`. This builds the app, watch for changes and serves on port 3000.
 
 ## Production
 
-To run a production build, run `yarn build`. This builds a single html file into the `./dist` folder.
+To run a production build, run `npm run build`. This builds a single html file into the `./dist` folder.

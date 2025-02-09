@@ -4,8 +4,8 @@ import { Header } from "#/components/header";
 import { Membership } from "#/components/membership";
 import { Profile } from "#/components/profile";
 import { References } from "#/components/references";
-import { Root } from "#/components/root";
 import { Skills } from "#/components/skills";
+import { Wrap } from "#/components/wrap";
 import type { ComponentProps } from "react";
 
 interface HomePageProps {
@@ -28,23 +28,35 @@ export const HomePage = ({
   skills,
 }: HomePageProps) => {
   return (
-    <Root>
+    <>
       <Header links={header.links} title={header.title} />
 
-      <main>
-        <Profile description={profile.description} heading={profile.heading} />
-        <Skills heading={skills.heading} skills={skills.skills} />
-        <Experience heading={experience.heading} items={experience.items} />
-        <Education heading={education.heading} items={education.items} />
-        <Membership
-          description={membership.description}
-          heading={membership.heading}
-        />
-        <References
-          description={references.description}
-          heading={references.heading}
-        />
-      </main>
-    </Root>
+      <Wrap>
+        <main className="max-w-[80ch]">
+          <Profile
+            description={profile.description}
+            heading={profile.heading}
+          />
+
+          <div className="hidden">
+            <Skills heading={skills.heading} skills={skills.skills} />
+          </div>
+
+          <Experience heading={experience.heading} items={experience.items} />
+
+          <Education heading={education.heading} items={education.items} />
+
+          <Membership
+            description={membership.description}
+            heading={membership.heading}
+          />
+
+          <References
+            description={references.description}
+            heading={references.heading}
+          />
+        </main>
+      </Wrap>
+    </>
   );
 };

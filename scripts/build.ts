@@ -2,32 +2,12 @@ import fs from "node:fs";
 import path from "node:path";
 import { config } from "dotenv-safe";
 import { minify } from "html-minifier";
-import fetch from "node-fetch";
 import { createElement } from "react";
 import { renderToString } from "react-dom/server";
 import { HomePage } from "#/pages/home";
 import { cvData } from "../data/cv";
-import type { ComponentProps } from "react";
 
 config();
-
-type HomeProps = ComponentProps<typeof HomePage>;
-
-const fetchData = async (url: string): Promise<HomeProps | undefined> => {
-  if (process.env.NODE_ENV === "development") {
-    return cvData as unknown as HomeProps;
-  }
-
-  const response = await fetch(url);
-
-  if (!response.ok) {
-    return undefined;
-  }
-
-  const data = (await response.json()) as HomeProps;
-
-  return data;
-};
 
 const main = async () => {
   const url = process.env.DATA_URL;
@@ -36,13 +16,7 @@ const main = async () => {
     throw new Error("Invalid URL.");
   }
 
-  const data = await fetchData(url);
-
-  if (!data) {
-    throw new Error("Invalid data.");
-  }
-
-  const document = createElement(HomePage, data);
+  const document = createElement(HomePage, cvData);
 
   const html = renderToString(document);
 
@@ -55,7 +29,7 @@ const main = async () => {
   <title>CV - Ryan Elliott-Potter</title>
   <link rel="stylesheet" href="/styles.css" />
 </head>
-<body class="antialiased">
+<body class="antialiased dark:bg-black dark:text-neutral-100">
   ${html}
 </body>
 </html>`;
@@ -76,6 +50,6 @@ main()
   .then(() => {
     console.log("Build successful.");
   })
-  .catch((error) => {
+  .catch((error: unknown) => {
     console.log("An error occurred.", error);
   });

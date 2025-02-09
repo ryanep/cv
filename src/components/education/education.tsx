@@ -18,7 +18,7 @@ interface EducationProps {
 
 export const Education = ({ heading, items }: EducationProps) => {
   return (
-    <Section background="grey" heading={heading}>
+    <Section heading={heading}>
       {items.map((item) => (
         <EducationItem
           course={item.course}
