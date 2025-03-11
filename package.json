@@ -1,7 +1,7 @@
 {
   "name": "@ryanep/cv",
   "description": "A personal curriculum vitae.",
-  "version": "1.0.0",
+  "version": "0.0.0-development",
   "author": "Ryan Elliott-Potter",
   "license": "MIT",
   "repository": {
@@ -9,8 +9,9 @@
   },
   "scripts": {
     "dev": "cross-env NODE_ENV=development nodemon",
-    "build": "node -r ts-node/register -r tsconfig-paths/register ./scripts/build",
-    "build:tailwind": "tailwindcss -i ./src/styles/root.css -o ./dist/styles.css --minify",
+    "build": "npm run build:html && npm run build:css",
+    "build:html": "node -r ts-node/register -r tsconfig-paths/register ./scripts/build",
+    "build:css": "tailwindcss -i ./src/styles/root.css -o ./dist/styles.css --minify",
     "fmt": "prettier --write ",
     "lint": "eslint .",
     "test": "jest",
