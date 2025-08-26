@@ -1,21 +1,12 @@
 import fs from "node:fs";
 import path from "node:path";
-import { config } from "dotenv-safe";
 import { minify } from "html-minifier";
 import { createElement } from "react";
 import { renderToString } from "react-dom/server";
 import { HomePage } from "#/pages/home";
 import { cvData } from "../data/cv";
 
-config();
-
 const main = async () => {
-  const url = process.env.DATA_URL;
-
-  if (!url) {
-    throw new Error("Invalid URL.");
-  }
-
   const document = createElement(HomePage, cvData);
 
   const html = renderToString(document);
