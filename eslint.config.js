@@ -1,4 +1,5 @@
-/* eslint-disable unicorn/prefer-module */
-const { createConfig } = require("@ryanep/eslint-config");
+import { createConfig } from "@ryanep/eslint-config";
 
-module.exports = createConfig();
+export default createConfig({
+  isTailwind: true,
+});

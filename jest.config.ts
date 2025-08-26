@@ -8,7 +8,6 @@ const jestConfig: Config.InitialOptions = {
     "^#/(.+)$": "<rootDir>/src/$1",
   },
   preset: "ts-jest",
-  setupFiles: ["./test-utils/factory.ts"],
   setupFilesAfterEnv: ["<rootDir>/jest.setup.ts"],
   testEnvironment: "jsdom",
   transform: {

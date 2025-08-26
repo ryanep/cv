@@ -20,7 +20,7 @@ export const EducationItem = ({
       <h3 className="font-bold">
         {title} -{" "}
         <span className="text-base font-normal">
-          {course}: {grades[0].grade}
+          {course}: {grades[0]?.grade}
         </span>
       </h3>
 

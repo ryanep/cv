@@ -6,35 +6,36 @@ import { renderToString } from "react-dom/server";
 import { HomePage } from "#/pages/home";
 import { cvData } from "../data/cv";
 
+const outputPath = path.join(process.cwd(), "./dist");
+
 const main = async () => {
   const document = createElement(HomePage, cvData);
-
   const html = renderToString(document);
 
-  const output = `<!doctype html>
+  const output = minify(
+    `<!doctype html>
 <html lang="en">
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <meta name="description" content="A full stack JavaScript developer - Ryan Elliott-Potter" />
-  <title>CV - Ryan Elliott-Potter</title>
+  <meta name="description" content="${cvData.description}" />
+  <title>${cvData.title}</title>
   <link rel="stylesheet" href="/styles.css" />
 </head>
 <body class="antialiased dark:bg-black dark:text-neutral-100">
   ${html}
 </body>
-</html>`;
+</html>`,
+    {
+      collapseWhitespace: true,
+    }
+  );
 
-  await fs.promises.mkdir(path.join(process.cwd(), "./dist"), {
+  await fs.promises.mkdir(outputPath, {
     recursive: true,
   });
 
-  await fs.promises.writeFile(
-    path.join(process.cwd(), "./dist/index.html"),
-    minify(output, {
-      collapseWhitespace: true,
-    })
-  );
+  await fs.promises.writeFile(path.join(outputPath, "index.html"), output);
 };
 
 main()

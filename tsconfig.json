@@ -2,27 +2,24 @@
   "compilerOptions": {
     "esModuleInterop": true,
     "jsx": "react-jsx",
-    "lib": ["es6", "esnext.asynciterable"],
-    "module": "commonjs",
-    "moduleResolution": "node",
+    "lib": ["dom", "dom.iterable", "es2022"],
+    "module": "esnext",
+    "moduleResolution": "bundler",
     "noEmit": true,
     "noImplicitAny": true,
     "noUnusedLocals": true,
     "outDir": "dist",
+    "baseUrl": "./src",
     "paths": {
-      "#/test-utils/*": ["./test-utils/*"],
-      "#/*": ["./src/*"]
+      "#/*": ["./*"]
     },
-    "plugins": [
-      {
-        "transform": "typescript-transform-paths"
-      }
-    ],
     "skipLibCheck": true,
     "sourceMap": true,
     "strict": true,
     "strictNullChecks": true,
-    "target": "es2015"
+    "noUncheckedIndexedAccess": true,
+    "noImplicitOverride": true,
+    "target": "es2022"
   },
   "exclude": ["node_modules"],
   "include": ["**/*"]

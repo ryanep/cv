@@ -2,19 +2,21 @@
   "name": "@ryanep/cv",
   "description": "A personal curriculum vitae.",
   "version": "0.0.0-development",
-  "author": "Ryan Elliott-Potter",
+  "author": "Ryan Elliott-Potter <me@ryanep.com>",
   "license": "MIT",
+  "type": "module",
   "repository": {
     "type": "git"
   },
   "scripts": {
     "dev": "cross-env NODE_ENV=development nodemon",
     "build": "npm run build:html && npm run build:css",
-    "build:html": "node -r ts-node/register -r tsconfig-paths/register ./scripts/build",
+    "build:html": "tsx ./scripts/build",
     "build:css": "tailwindcss -i ./src/styles/root.css -o ./dist/styles.css --minify",
-    "fmt": "prettier --write ",
+    "format": "prettier --write .",
     "lint": "eslint .",
     "test": "jest",
+    "typecheck": "tsc --noEmit",
     "precommit": "lint-staged"
   },
   "devDependencies": {
@@ -29,11 +31,9 @@
     "@types/jest": "^29.0.0",
     "@types/jest-axe": "^3.5.9",
     "@types/node": "^16.18.68",
-    "@types/node-fetch": "^2.6.2",
     "@types/react": "^18.0.0",
     "@types/react-dom": "^18.0.0",
     "@types/testing-library__react": "^10.2.0",
-    "classix": "^2.1.35",
     "cross-env": "^7.0.3",
     "eslint": "^9.17.0",
     "html-minifier": "^4.0.0",
@@ -43,7 +43,6 @@
     "jest-axe": "^8.0.0",
     "jest-environment-jsdom": "^29.0.3",
     "lint-staged": "^13.0.3",
-    "node-fetch": "^2.0.0",
     "nodemon": "^2.0.19",
     "postcss": "^8.4.16",
     "prettier": "^3.4.2",
@@ -53,10 +52,7 @@
     "serve": "^14.0.1",
     "tailwindcss": "^3.1.8",
     "ts-jest": "^29.1.1",
-    "ts-node": "^10.9.1",
-    "tsconfig-paths": "^4.2.0",
-    "ttypescript": "^1.5.15",
-    "typescript": "^5.2.2",
-    "typescript-transform-paths": "^3.4.6"
+    "tsx": "^4.20.5",
+    "typescript": "^5.2.2"
   }
 }
