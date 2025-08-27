@@ -1,6 +1,6 @@
 {
   "delay": 1000,
-  "exec": "NODE_ENV=development npm run build && serve -p 3000 ./dist",
+  "exec": "NODE_ENV=development npm run build && serve -n -p 3000 ./dist",
   "ext": "ts,tsx,json",
   "watch": ["data", "scripts", "src"]
 }
