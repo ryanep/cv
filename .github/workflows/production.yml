@@ -1,4 +1,3 @@
-# eslint-disable yml/sort-keys
 name: Production
 
 on: workflow_dispatch

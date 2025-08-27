@@ -1,5 +1,6 @@
 import { render } from "@testing-library/react";
-import { axe } from "jest-axe";
+import { expect, test } from "vitest";
+import { axe } from "vitest-axe";
 import { HomePage } from ".";
 import { cvData } from "../../../data/cv";
 
