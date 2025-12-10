@@ -21,7 +21,7 @@
     "updates": "npm-check-updates --interactive"
   },
   "devDependencies": {
-    "@ryanep/eslint-config": "^1.12.0",
+    "@ryanep/eslint-config": "^2.0.0",
     "@ryanep/prettier-config": "^1.3.0",
     "@tailwindcss/cli": "^4.1.12",
     "@testing-library/jest-dom": "^6.8.0",
